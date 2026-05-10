@@ -268,11 +268,13 @@ h3 {
   position: relative;
   padding: 28px;
   background: rgba(255, 255, 255, 0.86);
+  text-align: center;
 }
 
 .info-media {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 72px;
   margin-bottom: 16px;
 }
@@ -288,7 +290,7 @@ h3 {
 
 .tower-logo {
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
 }
 
 .info-icon {
@@ -838,7 +840,7 @@ h3 {
   }
 
   .hero::before {
-    inset: 0 calc((100vw - 2180px) / 2 + 45%) 0 calc((100vw - 2180px) / 2);
+    inset: 0 calc((100vw - 2180px) / 2 + 45%) 0 calc((100vw - 2180px) / 2 - 24px);
   }
 
   .hero-copy,
@@ -970,6 +972,7 @@ h3 {
     gap: 8px;
     align-items: baseline;
     padding: 12px 16px;
+    text-align: left;
   }
 
   .info-media {
