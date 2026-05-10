@@ -439,8 +439,8 @@ h3 {
 
 .institution-logos img {
   width: 100%;
-  height: 96px;
-  padding: 22px;
+  height: 124px;
+  padding: 16px 18px;
   object-fit: contain;
   background: rgba(255, 255, 255, 0.9);
   opacity: 1;
