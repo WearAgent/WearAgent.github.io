@@ -596,6 +596,14 @@ h3 {
   color: var(--ink);
 }
 
+.cfp-panel .review-note {
+  margin-top: 16px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .cfp-panel .format-note {
   margin-top: 16px;
   color: var(--muted);
