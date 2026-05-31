@@ -565,6 +565,15 @@ h3 {
   font-weight: 800;
 }
 
+.cfp-panel p a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.cfp-panel p a:hover {
+  color: var(--coral);
+}
+
 .submission-types {
   display: grid;
   gap: 13px;
