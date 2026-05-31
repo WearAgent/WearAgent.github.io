@@ -656,6 +656,22 @@ h3 {
   line-height: 1.35;
 }
 
+.submission-steps {
+  display: grid;
+  gap: 9px;
+  padding-left: 18px;
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.submission-steps strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
 .topic-grid article,
 .person {
   background: rgba(255, 255, 255, 0.86);
