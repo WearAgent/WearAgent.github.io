@@ -656,6 +656,23 @@ h3 {
   line-height: 1.35;
 }
 
+.deadline-change {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: baseline;
+}
+
+.deadline-change del {
+  color: var(--muted);
+  text-decoration-thickness: 2px;
+}
+
+.deadline-change span {
+  color: var(--ink);
+  font-weight: 900;
+}
+
 .submission-steps {
   display: grid;
   gap: 9px;
@@ -732,6 +749,16 @@ h3 {
 .date {
   color: var(--coral);
   font-weight: 900;
+}
+
+.date.date-change {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.date.date-change span {
+  color: var(--coral);
+  font-size: 17px;
 }
 
 .deadline-note {
