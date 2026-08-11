@@ -689,6 +689,79 @@ h3 {
   font-weight: 800;
 }
 
+.accepted-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 16%, rgba(236, 47, 120, 0.09), transparent 24%),
+    radial-gradient(circle at 92% 86%, rgba(37, 99, 235, 0.1), transparent 26%),
+    rgba(255, 255, 255, 0.58);
+}
+
+.accepted-heading {
+  max-width: 880px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.accepted-heading .section-lede {
+  margin-inline: auto;
+}
+
+.papers-catalog {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 28px;
+  max-width: 1500px;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  counter-reset: accepted-paper;
+}
+
+.paper-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  min-height: 142px;
+  padding: 22px 24px;
+  counter-increment: accepted-paper;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 14px 36px rgba(28, 57, 117, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.paper-entry::before {
+  content: counter(accepted-paper, decimal-leading-zero);
+  color: var(--coral);
+  font-family: "Bahnschrift", "Aptos Display", "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.paper-entry:hover {
+  background: #fff;
+  box-shadow: 0 20px 48px rgba(28, 57, 117, 0.13);
+  transform: translateY(-2px);
+}
+
+.paper-entry h3 {
+  margin-bottom: 8px;
+  font-size: clamp(17px, 1.25vw, 21px);
+  line-height: 1.34;
+}
+
+.paper-entry p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
 .topic-grid article,
 .person {
   background: rgba(255, 255, 255, 0.86);
@@ -919,6 +992,17 @@ h3 {
   .institution-logos {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
+  .papers-catalog {
+    gap: 14px;
+  }
+
+  .paper-entry {
+    min-height: 166px;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 12px;
+    padding: 20px;
+  }
 }
 
 @media (min-width: 2200px) {
@@ -1090,8 +1174,17 @@ h3 {
   .quick-info,
   .topic-grid,
   .people-grid,
+  .papers-catalog,
   .program {
     grid-template-columns: 1fr;
+  }
+
+  .accepted-heading {
+    text-align: left;
+  }
+
+  .paper-entry {
+    min-height: 0;
   }
 
   .institution-logos {
